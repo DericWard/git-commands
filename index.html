@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Learning GIT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header>
+
+</header>
+
+<body>
+    <h3>Initial set up of GIT:</h3>
+    <ol>
+        <li>git <strong>--version</strong> - will show whether GIT is installed, if not Install GIT* then continue with
+            this list.</li>
+        <li>git <strong>config --global user.name</strong> "yourname" - as on GitHub without spaces between fore and
+            surnames".</li>
+        <li>git <strong>config --global user.email</strong> "your.email" - the email address you used for your GitHub
+            account.</li>
+        <li>git <strong>--global color.ui auto</strong> - automatically color different UI elements.</li>
+    </ol>
+    <hr>
+
+    <h3>Project/repo directory set up:</h3>
+    <ol>
+        <li>mkdir 'directory/repo name' - creates a directory/repo</li>
+        <li>cd 'directory/repo name' - move into the newly created directory</li>
+        <li>git <strong>init .</strong> - initialise GIT in this directory and its sub-directories.</li>
+    </ol>
+    <ul>
+        <li><strong>rm -rf .git</strong> - remove a directory/repo from git (disable git in this repo)</li>
+    </ul>
+    <hr>
+
+    <h3>Once you have created, and perhaps added content to, your files you move to the <strong>staging</strong> stage
+        of the GIT
+        workflow:</h3>
+    <ol>
+        <li>git <strong>status</strong> - shows you which files have been added for staging and those which are not.
+        </li>
+        <li>git <strong>add</strong> 'file name(s)' - adds files for staging - multiple files require a space between
+            each file name</li>
+        <li>git <strong>add .</strong> - adds ALL files in this directory and its sub-directories for staging.</li>
+        <h4>Note: Adding all files with 'git add .' only works 'downwards' through a directory tree/structure - if you
+            are working in a
+            sub-directory and issue a 'git add .' command it will NOT add files that are 'above' the directory you are
+            working in. E.g. files located in any parent directories will NOT be added to staging. To overcome this:
+        </h4>
+        <li>git <strong>add . -A</strong> - this will stage files from the current directory and its child directories
+            as well as from its parent directory.</li>
+    </ol>
+    <ul>
+        <li>git <strong>rm --cached 'filename(s)'</strong> - removes files from staging, if you've made a mistake or
+            changes.</li>
+        <li>git <strong>rm -r --cached .</strong> - removes ALL currently staged files from staging.</li>
+    </ul>
+    <hr>
+
+    <h3>When you've staged all the files you want, move to the <strong>commit</strong> stage of the GIT workflow:
+    </h3>
+    <ol>
+        <li>git <strong>commit -m </strong>"message - why you are performing this commit" - sends the staged file(s) for
+            commit</li>
+        <h4>Note: Amend the commit message, if required, by issuing the following command:</h4>
+        <li>git <strong>commit --amend -m</strong> "your amended message" - this will replace the original message.</li>
+    </ol>
+    <ul>
+        <li>git <strong>restore</strong> 'filename' - removes the file 'filename' from the commit.</li>
+    </ul>
+    <hr>
+
+    <footer>
+
+    </footer>
+
+</body>
