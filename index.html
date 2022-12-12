@@ -11,6 +11,33 @@
 </header>
 
 <body>
+    <section>
+        <h3>Procedure to clone a GitHub repo and push file(s)/changes to that GitHub repo.</h3>
+        <ol>
+            <li>git <strong>clone</strong> 'GitHub SSH key from GitHub repo page'. This creates a directory that mirrors
+                the GitHub repo</li>
+            <li>Create your content i.e. HTML, CSS, JS, etc</li>
+            <li>git <strong>add</strong> 'filename' or '.' for all files. This adds the file(s) for staging.</li>
+            <li>git <strong>commit -m</strong> 'reason for push to GitHub'</li>
+            <li>git <strong>checkout -b</strong> feature/'HTML or CSS or JS or whatever'. This creates a new branch (-b)
+                and switches to
+                it.</li>
+            <li>git <strong>push</strong> --set-upstream <strong>origin feature/html</strong>(or whatever). Pushes the
+                changes to the specified branch on
+                GitHub, if the branch already exists on GitHub remove the --set-upstream option</li>
+        </ol>
+    </section>
+
+    <section>
+        <h3>Once a repo and local directory has been established, synched, and pushed, the following is all that is
+            required to make updates/changes:</h3>
+        <ol>
+            <li>git <strong>add</strong> filename(s) or '.'</li>
+            <li>git <strong>commit -m</strong> 'message regarding reasons for update(s)'</li>
+            <li>git <strong>push</strong></li>
+        </ol>
+    </section>
+
     <h3>Initial set up of GIT:</h3>
     <ol>
         <li>git <strong>--version</strong> - will show whether GIT is installed, if not Install GIT* then continue with
